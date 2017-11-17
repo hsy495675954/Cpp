@@ -29,6 +29,11 @@ class Stack
 		void Push(T data)
 		{
 			Final->Next = new Node;
+			if ( Final->Next == NULL )
+			{
+				cout << "Out of sapce!!!" << endl;
+				return;
+			}
 			Final = Final->Next;
 			
 			Final->Data = data;
