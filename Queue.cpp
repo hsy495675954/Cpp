@@ -30,6 +30,11 @@ class Queue
 		void Enqueue(T data)
 		{
 			Final->Next = new Node;
+			if ( Final->Next == NULL )
+			{
+				cout << "Out of space!!!" << endl;
+				return ;
+			}
 			Final = Final->Next;
 			Final->Data = data;
 			Final->Next = NULL;
