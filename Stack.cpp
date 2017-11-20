@@ -26,6 +26,22 @@ class Stack
 			count = 0;
 		}
 		
+		void MakeEmpty()
+		{
+			Node *Temp;
+			
+			do
+			{
+				Temp = &Head;
+				Temp = Temp->Next;
+				Head.Next = Head.Next->Next;
+				Delete Temp;
+			}
+			while(Temp->Next != NULL )
+			
+			Final = &Head;
+		}	
+		
 		void Push(T data)
 		{
 			Final->Next = new Node;
@@ -62,6 +78,7 @@ class Stack
 		{
 			return count;
 		}
+		
 };
 
 

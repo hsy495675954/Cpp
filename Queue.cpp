@@ -27,6 +27,22 @@ class Queue
 			count = 0;
 		}
 		
+		void MakeEmpty()
+		{
+			Node *Temp;
+			
+			do
+			{
+				Temp = &Head;
+				Temp = Temp->Next;
+				Head.Next = Head.Next->Next;
+				Delete Temp;
+			}
+			while(Temp->Next != NULL )
+			
+			Final = &Head;
+		}	
+		
 		void Enqueue(T data)
 		{
 			Final->Next = new Node;
